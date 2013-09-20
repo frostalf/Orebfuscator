@@ -14,7 +14,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.lishid.orebfuscator.internal.v1_6_R2;
+package com.lishid.orebfuscator.internal.v1_6_R3;
 
 import java.lang.reflect.Field;
 import java.util.Collections;
@@ -28,12 +28,13 @@ import com.lishid.orebfuscator.utils.ReflectionHelper;
 import org.bukkit.entity.Player;
 
 //Volatile
-import net.minecraft.server.v1_6_R2.*;
-import org.bukkit.craftbukkit.v1_6_R2.entity.*;
+import net.minecraft.server.v1_6_R3.*;
+import org.bukkit.craftbukkit.v1_6_R3.entity.*;
 
 public class PlayerHook implements IPlayerHook
 {
     @SuppressWarnings("unchecked")
+    @Override
     public void HookNM(Player p)
     {
         CraftPlayer player = (CraftPlayer) p;
@@ -74,8 +75,9 @@ public class PlayerHook implements IPlayerHook
     @SuppressWarnings("unchecked")
     private void hookPacket()
     {
-        if (hookPacket)
+        if (hookPacket) {
             return;
+        }
         
         hookPacket = true;
         Packet.l.a(14, Packet14Orebfuscator.class);
@@ -100,6 +102,7 @@ public class PlayerHook implements IPlayerHook
         }
     }
     
+    @Override
     public void HookChunkQueue(Player p)
     {
         CraftPlayer player = (CraftPlayer) p;

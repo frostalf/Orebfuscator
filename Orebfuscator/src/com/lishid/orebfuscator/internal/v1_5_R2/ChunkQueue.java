@@ -14,7 +14,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.lishid.orebfuscator.internal.v1_6_R2;
+package com.lishid.orebfuscator.internal.v1_5_R2;
 
 import java.util.Collections;
 import java.util.LinkedList;
@@ -30,8 +30,8 @@ import com.lishid.orebfuscator.internal.InternalAccessor;
 import com.lishid.orebfuscator.utils.ReflectionHelper;
 
 //Volatile
-import net.minecraft.server.v1_6_R2.*;
-import org.bukkit.craftbukkit.v1_6_R2.entity.*;
+import net.minecraft.server.v1_5_R2.*;
+import org.bukkit.craftbukkit.v1_5_R2.entity.*;
 
 public class ChunkQueue extends LinkedList<ChunkCoordIntPair> implements IChunkQueue
 {
@@ -206,7 +206,7 @@ public class ChunkQueue extends LinkedList<ChunkCoordIntPair> implements IChunkQ
                 }
                 catch (Exception e)
                 {
-                    //e.printStackTrace();
+                    e.printStackTrace();
                 }
             }
             

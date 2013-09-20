@@ -14,7 +14,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.lishid.orebfuscator.internal.v1_6_R2;
+package com.lishid.orebfuscator.internal.craftbukkit;
 
 import java.lang.reflect.Field;
 import java.util.Collections;
@@ -28,8 +28,9 @@ import com.lishid.orebfuscator.utils.ReflectionHelper;
 import org.bukkit.entity.Player;
 
 //Volatile
-import net.minecraft.server.v1_6_R2.*;
-import org.bukkit.craftbukkit.v1_6_R2.entity.*;
+import net.minecraft.server.*;
+
+import org.bukkit.craftbukkit.entity.*;
 
 public class PlayerHook implements IPlayerHook
 {
@@ -38,7 +39,7 @@ public class PlayerHook implements IPlayerHook
     {
         CraftPlayer player = (CraftPlayer) p;
         // Update NetworkManager's lists
-        NetworkManager networkManager = (NetworkManager) player.getHandle().playerConnection.networkManager;
+        NetworkManager networkManager = (NetworkManager) player.getHandle().netServerHandler.networkManager;
         
         Field[] networkFields = networkManager.getClass().getDeclaredFields();
         for (Field field : networkFields)

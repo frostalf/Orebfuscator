@@ -14,7 +14,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.lishid.orebfuscator.internal.v1_6_R2;
+package com.lishid.orebfuscator.internal.v1_4_R1;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -26,7 +26,7 @@ import com.lishid.orebfuscator.OrebfuscatorConfig;
 import com.lishid.orebfuscator.internal.IChunkCache;
 
 //Volatile
-import net.minecraft.server.v1_6_R2.*;
+import net.minecraft.server.v1_4_R1.*;
 
 public class ChunkCache implements IChunkCache
 {

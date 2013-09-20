@@ -14,7 +14,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.lishid.orebfuscator.internal.v1_6_R2;
+package com.lishid.orebfuscator.internal.v1_4_6;
 
 import java.lang.reflect.Field;
 import java.util.Collections;
@@ -28,8 +28,9 @@ import com.lishid.orebfuscator.utils.ReflectionHelper;
 import org.bukkit.entity.Player;
 
 //Volatile
-import net.minecraft.server.v1_6_R2.*;
-import org.bukkit.craftbukkit.v1_6_R2.entity.*;
+import net.minecraft.server.v1_4_6.*;
+
+import org.bukkit.craftbukkit.v1_4_6.entity.*;
 
 public class PlayerHook implements IPlayerHook
 {
@@ -70,11 +71,11 @@ public class PlayerHook implements IPlayerHook
     }
     
     static boolean hookPacket = false;
-    
+
     @SuppressWarnings("unchecked")
     private void hookPacket()
     {
-        if (hookPacket)
+        if(hookPacket)
             return;
         
         hookPacket = true;

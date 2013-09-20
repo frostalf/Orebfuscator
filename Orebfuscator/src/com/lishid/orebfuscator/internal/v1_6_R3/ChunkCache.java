@@ -14,7 +14,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.lishid.orebfuscator.internal.v1_6_R2;
+package com.lishid.orebfuscator.internal.v1_6_R3;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -26,11 +26,11 @@ import com.lishid.orebfuscator.OrebfuscatorConfig;
 import com.lishid.orebfuscator.internal.IChunkCache;
 
 //Volatile
-import net.minecraft.server.v1_6_R2.*;
+import net.minecraft.server.v1_6_R3.*;
 
 public class ChunkCache implements IChunkCache
 {
-    private static final HashMap<File, RegionFile> cachedRegionFiles = new HashMap<File, RegionFile>();
+    private static final HashMap<File, RegionFile> cachedRegionFiles = new HashMap<>();
     
     private synchronized RegionFile getRegionFile(File folder, int x, int z)
     {
@@ -94,8 +94,9 @@ public class ChunkCache implements IChunkCache
         {
             try
             {
-                if (regionFile != null)
+                if (regionFile != null) {
                     regionFile.c();
+                }
             }
             catch (Exception e)
             {

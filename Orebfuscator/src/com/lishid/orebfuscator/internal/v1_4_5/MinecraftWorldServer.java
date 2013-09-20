@@ -14,14 +14,14 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.lishid.orebfuscator.internal.v1_6_R2;
+package com.lishid.orebfuscator.internal.v1_4_5;
 
 import com.lishid.orebfuscator.internal.IMinecraftWorldServer;
 import com.lishid.orebfuscator.internal.InternalAccessor;
 
 //Volatile
-import net.minecraft.server.v1_6_R2.*;
-import org.bukkit.craftbukkit.v1_6_R2.*;
+import net.minecraft.server.v1_4_5.*;
+import org.bukkit.craftbukkit.v1_4_5.*;
 
 public class MinecraftWorldServer implements IMinecraftWorldServer
 {

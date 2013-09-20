@@ -14,7 +14,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.lishid.orebfuscator.internal.v1_6_R2;
+package com.lishid.orebfuscator.internal.v1_6_R3;
 
 import java.util.zip.Deflater;
 
@@ -24,7 +24,7 @@ import com.lishid.orebfuscator.internal.InternalAccessor;
 import com.lishid.orebfuscator.utils.ReflectionHelper;
 
 //Volatile
-import net.minecraft.server.v1_6_R2.*;
+import net.minecraft.server.v1_6_R3.*;
 
 public class Packet56 implements IPacket56
 {
@@ -85,16 +85,19 @@ public class Packet56 implements IPacket56
         ReflectionHelper.setPrivateField(Packet56MapChunkBulk.class, packet, field, data);
     }
     
+    @Override
     public String getInflatedBuffers()
     {
         return "inflatedBuffers";
     }
     
+    @Override
     public String getBuildBuffer()
     {
         return "buildBuffer";
     }
     
+    @Override
     public String getOutputBuffer()
     {
         return "buffer";
